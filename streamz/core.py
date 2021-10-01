@@ -671,6 +671,9 @@ class Stream(APIRegisterMixin):
             if 'ref' in m:
                 m['ref'].release(n)
 
+    def on_exception(self, func):
+        pass
+
 
 @Stream.register_api()
 class map(Stream):
